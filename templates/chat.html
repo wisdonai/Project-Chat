@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YourAI Chat</title>
+</head>
+
+<body>
+
+    <h1>💝 YourAI Chat</h1>
+
+    <p>Welcome! I'm ready to chat.</p>
+
+    {% if user_message %}
+        <p><strong>You:</strong> {{ user_message }}</p>
+    {% endif %}
+
+    {% if chat_response %}
+        <p><strong>Chat:</strong> {{ chat_response }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input
+            type="text"
+            name="message"
+            placeholder="Type a message..."
+            autocomplete="off"
+        >
+
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+
+</html>
